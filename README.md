@@ -1,61 +1,64 @@
-# Getting Started with Java Project
+# JAVA Project
 
-This project was bootstrapped with Java.
+This project is an Object-Oriented Car Manager implemented in Java. It demonstrates the use of object-oriented programming principles to manage car and brand objects and provides a simple interface for interacting with car data. The system is designed for educational purposes, showcasing Java classes, encapsulation, and basic object manipulation.
 
-## Available Commands
+## Prerequisites
 
-In the project directory, you can run:
+- Java Development Kit (JDK) 8 or higher
+- (Optional) An IDE like IntelliJ IDEA, Eclipse, NetBeans, or VS Code for easier code navigation
 
-### `mvn clean install`
+## Installation
 
-Builds the project and installs the package into the local repository.\
-This command compiles the code, runs tests, and packages the application.
+1. **Clone the repository** (if not already downloaded):
+   ```sh
+   git clone <repository-url>
+   cd Car-Management-main
+   ```
+2. **Compile the source code:**
+   Use the following command from the project root to compile all Java files:
+   ```sh
+   javac -d out src/*.java
+   ```
+   This will compile the Java files and place the `.class` files in the `out` directory.
 
-### `mvn spring-boot:run`
+   Alternatively, if you use NetBeans, you can build the project using the provided `build.xml` (Ant build script).
 
-Runs the application in the development mode.\
-Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
+## How to Run
 
-The application will reload when you make changes.\
-You may also see any errors in the console.
+After compiling, run the main class to start the Car Manager application. For example:
 
-### `mvn test`
+```sh
+java -cp out CarManager
+```
 
-Launches the test runner.\
-This command runs all the tests in the project.
+Or, if you use NetBeans, simply run the project from the IDE.
 
-### `mvn package`
+## Project Structure
 
-Packages the application into a JAR file.\
-The JAR file will be created in the `target` directory.
+```
+Car-Management-main/
+├── src/
+│   ├── Brand.java         # Brand entity class
+│   ├── BrandList.java     # Manages a list of brands
+│   ├── Car.java           # Car entity class
+│   ├── CarList.java       # Manages a list of cars
+│   ├── CarManager.java    # Main entry point and application logic
+│   ├── Constraints.java   # Validation and constraints
+│   ├── Menu.java          # Menu utilities
+│   ├── brands.txt         # Data file for brands
+│   └── cars.txt           # Data file for cars
+├── build.xml              # Ant build script (for NetBeans)
+├── manifest.mf            # Manifest file
+├── README.md              # Project documentation
+└── ... (other project and build files)
+```
 
-### `mvn clean`
-
-Cleans the project by deleting the `target` directory.\
-This command is useful for ensuring a fresh build.
+- The `src` directory contains the main Java source files for the Car Manager application.
+- The `brands.txt` and `cars.txt` files store sample data for brands and cars.
+- The `build.xml` file is used for building the project with Apache Ant (commonly used in NetBeans projects).
 
 ## Learn More
 
-You can learn more in the [Maven documentation](https://maven.apache.org/guides/index.html).
-
-To learn Spring Boot, check out the [Spring Boot documentation](https://spring.io/projects/spring-boot).
-
-### Dependency Management
-
-This section has moved here: [Maven Dependency Management](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html)
-
-### Building an Executable JAR
-
-This section has moved here: [Spring Boot Executable JAR](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-executable-jar.html)
-
-### Advanced Configuration
-
-This section has moved here: [Maven Advanced Configuration](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html)
-
-### Deployment
-
-This section has moved here: [Spring Boot Deployment](https://spring.io/guides/gs/spring-boot/)
-
-### Troubleshooting
-
-This section has moved here: [Maven Troubleshooting](https://maven.apache.org/guides/introduction/introduction-to-troubleshooting.html)
+- [Java Documentation](https://docs.oracle.com/javase/tutorial/)
+- [How to Compile and Run Java](https://www.oracle.com/java/technologies/javase/codeconventions-137265.html)
+- For questions or contributions, please open an issue or pull request.
